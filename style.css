@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #b2e0b2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #3a5f0b;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.stopwatch-title {
+    font-size: 2.5em;
+    color: #2b2121;
+    text-shadow: 2px 2px 8px rgba(250, 246, 246, 0.6);
+    margin-bottom: 20px;
+    font-family: "Playwrite GB S", cursive;
+    font-weight: 400;
+}
+
+.outer-circle {
+    width: 80vw;
+    height: 80vw;
+    max-width: 300px;
+    max-height: 300px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4CAF50, #81C784);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.inner-circle {
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background: #2c3e50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.text {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    color: #f1c40f;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.minute {
+    font-size: 3em;
+}
+
+.sec {
+    font-size: 2.5em;
+}
+
+.msec {
+    font-size: 2em;
+}
+
+.colon {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 700;
+    color: #f1c40f;
+    font-size: 2em;
+    vertical-align: middle;
+    margin: 0 5px;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.button {
+    width: 15vw;
+    height: 15vw;
+    max-width: 60px;
+    max-height: 60px;
+    border-radius: 50%;
+    background-color: #e74c3c;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-size: 1em;
+}
+
+.button:hover {
+    background-color: #2ecc71;
+    transform: scale(1.1);
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.laps {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.lap-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background: linear-gradient(135deg, #f39c12, #f1c40f);
+    border-radius: 25px;
+    margin-bottom: 10px;
+    color: white;
+    box-shadow: 0 4px 10px rgb(239, 235, 235);
+}
+
+.lap-clear {
+    display: block;
+    margin: 20px auto;
+    padding: 12px 25px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 150px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.lap-clear:hover {
+    background-color: #c0392b;
+}
+
+@media only screen and (max-width: 600px) {
+    .stopwatch-title {
+        font-size: 2em;
+    }
+
+    .outer-circle {
+        width: 70vw;
+        height: 70vw;
+    }
+
+    .inner-circle {
+        width: 90%;
+        height: 90%;
+    }
+
+    .text {
+        font-size: 2em;
+    }
+
+    .button {
+        width: 20vw;
+        height: 20vw;
+        max-width: 50px;
+        max-height: 50px;
+    }
+
+    .lap-item {
+        padding: 8px;
+    }
+
+    .lap-clear {
+        width: 120px;
+    }
+}
